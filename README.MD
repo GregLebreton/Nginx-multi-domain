@@ -11,6 +11,7 @@ processus:
 
 1) Créer les fichier de configuration pour chaque site avec chaqun un "block server" approprié:
         site 1:
+        
             $ sudo nano /etc/nginx/sites-available/www.site1.com.conf
 
                 server {
@@ -29,6 +30,7 @@ processus:
                 }   
 
         site 2:
+        
             $ sudo nano /etc/nginx/sites-available/www.site2.com.conf
                     
                 server {
