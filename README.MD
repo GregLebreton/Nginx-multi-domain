@@ -9,7 +9,7 @@ Comment configurer un serveur Nginx sur Debian 10 pour qu'il serve deux sites h�
 
 processus:
 
-    1) Créer les fichier de configuration pour chaque site avec chaqun un "block server" approprié:
+1) Créer les fichier de configuration pour chaque site avec chaqun un "block server" approprié:
         site 1:
             $ sudo nano /etc/nginx/sites-available/www.site1.com.conf
 
@@ -46,13 +46,13 @@ processus:
                         }
                 }
 
-    2) Créer les liens symboliques pour que Nginx prenne en compte les configurations nouvellement crées:
+2) Créer les liens symboliques pour que Nginx prenne en compte les configurations nouvellement crées:
 
         $ sudo ln -s /etc/nginx/sites-available/www.site1.com.conf /etc/nginx/sites-enabled/www.site1.com.conf
 
         $ sudo ln -s /etc/nginx/sites-available/www.site2.com.conf /etc/nginx/sites-enabled/www.site2.com.conf
 
-    3) Ajouter les noms de domaine aux variables d'environnement dans le fichier /etc/hosts
+3) Ajouter les noms de domaine aux variables d'environnement dans le fichier /etc/hosts
 
         $ sudo nano /etc/hosts
 
@@ -60,13 +60,13 @@ processus:
 
         127.0.0.1 localhost www.autre_nom_de_domaine www.site1.com www.site2.com
 
-    4) Créer les dossiers de nos sites (site1 et site2) dans le dossier par defaut de Nginx (/var/www/html):
+4) Créer les dossiers de nos sites (site1 et site2) dans le dossier par defaut de Nginx (/var/www/html):
 
         $ sudo mkdir /var/www/html/site1
 
         $ sudo mkdir /var/www/html/site2
 
-    5) Créer les fichier index.html dans les répertoires racines de chaque site et y copier respectivement les contenus HTML suivant:
+5) Créer les fichier index.html dans les répertoires racines de chaque site et y copier respectivement les contenus HTML suivant:
 
         $ sudo nano /var/www/html/site1/index.html
 
@@ -82,18 +82,18 @@ processus:
                     <p style="text-align:center; font-size: 40px">Hello site 2</p>
             </html>
 
-    6) Donnez les droits d'accès au dossier /var/www contenant les sites:
+6) Donnez les droits d'accès au dossier /var/www contenant les sites:
 
         $ sudo chown -R votre_nom_d'utilsateur /var/www
     
-    7) Donner les accès suffisant au fichiers pour que Nginx y accède;
+7) Donner les accès suffisant au fichiers pour que Nginx y accède;
 
         $ sudo chmod -R 755 /var/www
 
-    8) Redémarrer le service Nginx et réseau pour ... les nouvelles configurations:
+8) Redémarrer le service Nginx et réseau pour ... les nouvelles configurations:
 
         $ sudo systemctl restart nginx
 
         $ sudo systemctl restart networking
 
-    9) Accédez par votre navigateur aux site 1 et 2 en entrant les noms de domaine correspondant dans la barre d'adresse de votre navigateur
+9) Accédez par votre navigateur aux site 1 et 2 en entrant les noms de domaine correspondant dans la barre d'adresse de votre navigateur
