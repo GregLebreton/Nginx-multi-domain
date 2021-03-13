@@ -10,6 +10,7 @@ Comment configurer un serveur Nginx sur Debian 10 pour qu'il serve deux sites h�
 processus:
 
 1) Créer les fichier de configuration pour chaque site avec chaqun un "block server" approprié:
+        
         site 1:
         
             $ sudo nano /etc/nginx/sites-available/www.site1.com.conf
