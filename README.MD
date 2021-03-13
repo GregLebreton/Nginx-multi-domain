@@ -65,9 +65,7 @@ processus:
 
 4) Créer les dossiers de nos sites (site1 et site2) dans le dossier par defaut de Nginx (/var/www/html):
 
-        $ sudo mkdir /var/www/html/site1
-
-        $ sudo mkdir /var/www/html/site2
+        $ sudo mkdir /var/www/html/site1 /var/www/html/site2
 
 5) Créer les fichier index.html dans les répertoires racines de chaque site et y copier respectivement les contenus HTML suivant:
 
