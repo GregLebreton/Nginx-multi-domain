@@ -1,11 +1,11 @@
-                                 ###### CONFIGURER NGINX EN MULTI-DOMAINES ######
+                         ###### CONFIGURER NGINX EN MULTI-DOMAINES ######
 
 
 
 Comment configurer un serveur Nginx sur Debian 10 pour qu'il serve deux sites hébergés sur la même machine hôte.
 
     prérequis:
-        - un Nginx fonctionnel configurer par défaut
+        - un Nginx fonctionnel configuré par défaut
 
 processus:
 
